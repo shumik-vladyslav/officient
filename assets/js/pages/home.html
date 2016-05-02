@@ -1,0 +1,173 @@
+ <div layout="row" layout-wrap class="layout-wrap layout-row" style="background-color: #f0f0f0;">
+      <div flex="20" class="flex-20"></div>
+      <div flex="60" class="flex-60">
+        <md-toolbar flex class="md-tall" style="background-color: #cdcbcb; min-height:10px; max-height: 40px; height: 40px;">
+          <span style="margin-top:5px; margin-left: 15px; color:black;">Officient.dk</span>
+        </md-toolbar>
+        <div layout style="margin-top:35px;" layout-wrap class="layout-wrap layout-row">
+          <div flex="30" class="flex-30" style="margin-left: 40px;"><h2>Create An Account</h2></div>
+          <div flex="25" class="flex-25"></div>
+          <div flex="35" class="flex-35" style="margin-top:10px;">
+            <span>Need some help?</span>
+            <md-button class="md-raised" style="background-color: #595959; color: white;">Chat with us</md-button>
+          </div>
+        </div>
+        <div layout layout-wrap class="layout-wrap layout-row">
+          <div flex="25" class="flex-25" style="margin-right: 10px;">
+            <p style="margin-top:12px;" flex-offset="20" class="flex-offset-20">Salutation</p>
+          </div>
+          <div flex="40" class="flex-40">
+             <md-input-container style="margin-top: 0px;">
+              <label></label>
+              <md-select ng-model="lol2">
+                <md-option ng-model="lol" value="">
+                  lol
+                </md-option>
+              </md-select>
+            </md-input-container>
+          </div>
+        </div>
+        <div layout layout-wrap class="layout-wrap layout-row">
+          <div flex="25" class="flex-25">
+            <p style="margin-top:12px;" flex-offset="20" class="flex-offset-20">First Name</p>
+          </div>
+          <div flex="30" class="flex-30">
+            <input style="margin-top:8px; width: 100%;" ng-model="firstName">
+          </div>
+          <div flex="40" class="flex-40" style="margin-top: 8px;" ng-show="firstErr">
+            <span style="margin-left: 15px; font-size: 12px; color: red;">{{firstErr}}</span>
+          </div>
+        </div>
+        <div layout layout-wrap class="layout-wrap layout-row">
+          <div flex="25" class="flex-25">
+            <p style="margin-top:12px;" flex-offset="20" class="flex-offset-20">Last Name</p>
+          </div>
+          <div flex="30" class="flex-30">
+            <input style="margin-top:8px; width: 100%;" ng-model="lastName">
+          </div>
+          <div flex="40" class="flex-40" style="margin-top: 8px;" ng-show="lastErr">
+            <span style="margin-left: 15px; font-size: 12px; color: red;">{{lastErr}}</span>
+          </div>
+        </div>
+        <div flex="50" flex-offset="5" class="flex-offset-5 flex-50">
+          <hr>
+        </div>
+        <div layout layout-wrap class="layout-wrap layout-row">
+          <div flex="25" class="flex-25">
+            <p style="margin-top:12px;" flex-offset="20" class="flex-offset-20">Username</p>
+          </div>
+          <div flex="30" class="flex-30">
+            <input style="margin-top:8px; width: 100%;" ng-model="username">
+          </div>
+          <div flex="40" class="flex-40" style="margin-top: 8px;" ng-show="userErr">
+            <span style="margin-left: 15px; font-size: 12px; color: red;">{{userErr}}</span>
+          </div>
+        </div>
+        <div layout layout-wrap class="layout-wrap layout-row">
+          <div flex="25" class="flex-25">
+            <p style="margin-top:12px;" flex-offset="20" class="flex-offset-20">Password</p>
+          </div>
+          <div flex="30" class="flex-30">
+            <input style="margin-top:8px; width: 100%;" ng-model="password">
+          </div>
+          <div flex="40" class="flex-40" style="margin-top: 8px;" ng-show="passErr">
+            <span style="margin-left: 15px; font-size: 12px; color: red;">{{passErr}}</span>
+          </div>
+        </div>
+        <div layout layout-wrap class="layout-wrap layout-row">
+          <div flex="25" class="flex-25">
+            <p style="margin-top:12px;" flex-offset="20" class="flex-offset-20" >E-Mail</p>
+          </div>
+          <div flex="30" class="flex-30">
+            <input style="margin-top:8px; width: 100%;" ng-model="email">
+          </div>
+          <div flex="40" class="flex-40" style="margin-top: 8px;">
+            <span ng-show="emailMessage" style="margin-left: 15px;font-size: 12px; opacity: 0.4;" ng-class="{appeared: email}">{{emailMessage}}</span>
+            <span ng-show="emailErr"style="margin-left: 15px;font-size: 12px; color: red;">{{emailErr}}</span>
+          </div>
+        </div>
+        <div layout layout-wrap class="layout-wrap layout-row">
+          <div flex="25" class="flex-25">
+            <p style="margin-top:12px;" flex-offset="20" class="flex-offset-20">Repeat E-Mail</p>
+          </div>
+          <div flex="30" class="flex-30">
+            <input style="margin-top:8px; width: 100%;" ng-model="repeatedEmail">
+          </div>
+        </div>
+        <div flex="50" flex-offset="5" class="flex-offset-5 flex-50">
+          <hr>
+        </div>
+        <div layout layout-wrap class="layout-wrap layout-row">
+          <div flex="25" class="flex-25">
+            <p style="margin-top:12px;" flex-offset="20" class="flex-offset-20">Phone number</p>
+          </div>
+          <div flex="30" class="flex-30">
+            <input style="margin-top:8px; width: 100%;" ng-model="phoneNumber">
+          </div>
+          <div flex="40" class="flex-40" style="margin-top: 8px;">
+            <span ng-show="phoneErr"style="margin-left: 15px;font-size: 12px; color: red;">{{phoneErr}}</span>
+            <span ng-show="phoneMessage"style="margin-left: 15px;font-size: 12px; opacity: 0.4;" ng-class="{appeared: phoneNumber}">{{phoneMessage}}</span>
+          </div>
+        </div>
+        <div layout layout-wrap class="layout-wrap layout-row">
+          <div flex="25" class="flex-25">
+            <p style="margin-top:12px;" flex-offset="20" class="flex-offset-20">Company Name</p>
+          </div>
+          <div flex="30" class="flex-30">
+            <input style="margin-top:8px; width: 100%;" ng-model="companyName">
+          </div>
+          <div flex="40" class="flex-40" style="margin-top: 8px;">
+            <span style="margin-left: 15px;font-size: 12px; opacity: 0.4;" ng-class="{appeared: companyName}">If you are registering on behalf of company</span>
+          </div>
+        </div>
+        <div layout layout-wrap class="layout-wrap layout-row">
+          <div flex="25" class="flex-25">
+            <p style="margin-top:12px;" flex-offset="20" class="flex-offset-20">Address</p>
+          </div>
+          <div flex="30" class="flex-30">
+            <input style="margin-top:8px; width: 100%;" ng-model="address">
+          </div>
+          <div flex="40" class="flex-40" style="margin-top: 8px;" ng-show="addrErr">
+            <span style="margin-left: 15px; font-size: 12px; color: red;">{{addrErr}}</span>
+          </div>
+        </div>
+        <div layout layout-wrap class="layout-wrap layout-row">
+          <div flex="25" class="flex-25">
+            <p style="margin-top:12px;" flex-offset="20" class="flex-offset-20">Postal Code</p>
+          </div>
+          <div flex="30" class="flex-30">
+            <input style="margin-top:8px; width: 100%;" ng-model="postalCode">
+          </div>
+          <div flex="40" class="flex-40" style="margin-top: 8px;" ng-show="codeErr">
+            <span style="margin-left: 15px; font-size: 12px; color: red;">{{codeErr}}</span>
+          </div>
+        </div>
+        <div layout layout-wrap class="layout-wrap layout-row">
+          <div flex="25" class="flex-25">
+            <p style="margin-top:12px;" flex-offset="20" class="flex-offset-20">CVR Number</p>
+          </div>
+          <div flex="30" class="flex-30">
+            <input style="margin-top:8px; width: 100%;" ng-model="cvrNumber">
+          </div>
+          <div flex="40" class="flex-40" style="margin-top: 8px;" ng-show="cvrErr">
+            <span style="margin-left: 15px; font-size: 12px; color: red;">{{cvrErr}}</span>
+          </div>
+        </div>
+        <div layout flex-offset="25" class="flex-offset-25">
+          <md-checkbox ng-model="ifChecked" aria-label="Checkbox 1" >
+              I accept Terms & Conditions
+          </md-checkbox>
+        </div>
+        <div layout ng-show="errBool" flex-offset="25" flex="30" class="flex-offset-20" style="color: red;">
+          {{errMessage}}
+        </div>
+        <div layout flex-offset="25" flex="30" class="flex-offset-20" >
+        <md-button class="md-raised" ng-disabled="!ifChecked" style="background-color: #595959; color: white; width: 100%;" ng-click="createAcc()">Create an account</md-button>
+        </div>
+    </div>
+
+    <style>
+      .appeared{
+        opacity: 1 !important;
+      },
+    </style>
